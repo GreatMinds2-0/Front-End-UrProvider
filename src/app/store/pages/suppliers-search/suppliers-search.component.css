@@ -1,0 +1,61 @@
+.header {
+  text-align: center;
+  margin-top: 50px;
+}
+.mat-form-field {
+  width: 100%;
+  font-size: 15px;
+  background-color: #5598c3;
+  color: black;
+  border-radius: 10px;
+}
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.but {
+  margin-top: 50px;
+  color: white;
+  background-color: #3F51B5;
+}
+
+.img-products {
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-card {
+  max-width: 300px;
+  min-width: 300px;
+  background-color: #DCE4FC;
+  color: black;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  width: 120px;
+}
+
+.back-button {
+  background-color: #DCE4FC;
+  text-align: center;
+}
+.example-card {
+  padding-left: 105px;
+}
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<h1 class="header">Edit Product #{{ productData.id }}</h1>
+
+<div class="container2">
+  <div>
+    <div class="mt-5">
+      <mat-card class="product-card">
+        <mat-card-header>
+          <div class="title-row">
+            <b>Name: </b><input style="border-radius: 10px" type="text" name="name" [(ngModel)]="productData.name" class="form-control mb-3">
+          </div>
+        </mat-card-header>
+        <img mat-card-image class="img-product" [src]="productData.image" alt="Reference product's photo">
+        <mat-card-content>
+          <div class="row clean-row">
+            <b>Category: </b><input style="border-radius: 10px" type="text" name="category" [(ngModel)]="productData.category" class="form-control mb-3">
+          </div>
+          <div class="row clean-row">
+            <b>Description: </b><input style="border-radius: 10px" type="text" name="description" [(ngModel)]="productData.description" class="form-control mb-3">
+          </div>
+          <div class="row clean-row">
+            <b>Image: </b><input style="border-radius: 10px" type="url" name="image" [(ngModel)]="productData.image" class="form-control mb-3">
+          </div>
+          <div class="row clean-row">
+            <mat-slide-toggle class="example-margin" [(ngModel)]="productData.available">Available</mat-slide-toggle>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div align="center">
+            <button mat-raised-button class="but" (click)="updateProduct()" [routerLink]="['/supplier-inventory', id]">SAVE</button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div align="center">
+  <div class="example-button-container">
+    <button mat-mini-fab class="back-button" aria-label="Back icon button" [routerLink]="['/supplier-inventory', id]">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+<div class="mm">
+  <mat-card class="product-card">
+    <h1 class="title-row">Supplier</h1>
+    <div align="center">
+      <img class="image" [src] ="profilesData.image">
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Supplier Name</mat-label>
+        <input matInput placeholder="supplierName" [(ngModel)]="profilesData.supplierName">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Name</mat-label>
+        <input matInput placeholder="name" [(ngModel)]="profilesData.name">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">LastName</mat-label>
+        <input matInput placeholder="lastName" [(ngModel)]="profilesData.lastName">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Image</mat-label>
+        <input matInput  placeholder="image" [(ngModel)]="profilesData.image">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Email</mat-label>
+        <input matInput  placeholder="email" [(ngModel)]="profilesData.email">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Address</mat-label>
+        <input matInput  placeholder="address" [(ngModel)]="profilesData.address">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Password</mat-label>
+        <input matInput  placeholder="password" [(ngModel)]="profilesData.password">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">RUC</mat-label>
+        <input matInput  placeholder="ruc" [(ngModel)]="profilesData.ruc">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Category</mat-label>
+        <input matInput  placeholder="category" [(ngModel)]="profilesData.category">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Description</mat-label>
+        <input matInput  placeholder="description" [(ngModel)]="profilesData.description">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Phone</mat-label>
+        <input matInput  placeholder="phone" [(ngModel)]="profilesData.phone">
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions align="center">
+      <button mat-raised-button class="but" (click)="updateProfile()" [routerLink]= "['/supplier-profile',id]">Save</button>
+    </div>
+    <br>
+  </mat-card>
+</div>
+<br>
+<br>
+<br>
+<div align="center">
+  <div class="example-button-container">
+    <button mat-mini-fab class="back-button" aria-label="Back icon button" [routerLink]="['/supplier-profile', id]">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>

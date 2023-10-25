@@ -1,0 +1,39 @@
+.parent{
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 50px;
+  padding-left: 300px;
+}
+.example-card{
+  height: 500px;
+  background: #3F51B5;
+}
+.mat-card-header{
+  display: contents;
+  text-align: center;
+}
+.mat-card-title{
+  text-align: center;
+  font-size: 30px;
+}
+
+.regular-size{
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.text{
+  padding-bottom: 50px;
+}
+.but{
+  margin-top: 10px;
+  margin-left: 10px;
+  color: white;
+  background-color: #3F51B5;
+}
+@media (max-width: 850px) {
+    .parent{
+      padding-left: 0;
+    }
+
+}

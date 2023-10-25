@@ -1,0 +1,40 @@
+<mat-card-header>
+  <mat-form-field  appearance="standard">
+    <mat-label>Search products</mat-label>
+    <mat-icon matPrefix >search</mat-icon>
+    <input matInput value="{{searchTerm}}" style="color: #3F51B5" (keyup)="applyFilter($event)" placeholder="Search your products"  #input>
+
+  </mat-form-field>
+</mat-card-header>
+
+
+<mat-card>
+  <mat-card-title>Supplier Products: {{getTotalProducts()}} </mat-card-title>
+
+</mat-card>
+<div class="container2">
+  <div *ngFor="let product of dataSource.filteredData">
+    <div class="mt-5">
+      <a style="text-decoration: none" [routerLink]="['/product-view', id, product.id,product.supplierId]">
+        <mat-card class="product-card">
+          <mat-card-header>
+            <mat-card-title>{{ product.name }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image class="img-products" [src]="product.image" alt="Reference product's photo">
+          <mat-card-content>
+            <p><b>Category:</b> {{ product.category }}</p>
+            <p *ngIf="product.available == true"><b>Available:</b> Yes</p>
+            <p *ngIf="product.available == false"><b>Available:</b> No</p>
+            <p><b>Description:</b> {{ product.description }}</p>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div align="center">
+  <div class="example-button-container">
+
+  </div>
+</div>

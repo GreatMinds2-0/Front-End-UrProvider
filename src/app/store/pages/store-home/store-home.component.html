@@ -1,0 +1,75 @@
+<div align="center">
+  <mat-form-field class="search" appearance="fill">
+    <mat-label>Search products</mat-label>
+    <input matInput [(ngModel)]="searchTerm" placeholder="Search products by name"/>
+    <mat-icon matPrefix (click)="filter()">search</mat-icon>
+  </mat-form-field>
+</div>
+
+
+<mat-card class="homecard">
+  <mat-card-content>
+    <div id="content">
+      <div class="logo">
+        <img class="img-store" src="{{storeData.image}}" alt="">
+      </div>
+
+      <div class="menu">
+        <h1>Hello {{storeData.name}} {{storeData.lastName}}</h1>
+        <p>We are happy to continue working with <b>{{storeData.storeName}}</b></p>
+      </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="title-card">
+  <mat-card-title>Best selling product:</mat-card-title>
+</mat-card>
+
+<div class="container2">
+  <div *ngFor="let product of dataProduct.filteredData">
+    <div class="mt-5">
+      <a style="text-decoration: none" [routerLink]="['/product-view', id, product.id,product.supplierId]">
+        <mat-card class="product-card">
+          <mat-card-header>
+            <mat-card-title>{{ product.name }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image class="img-products" [src]="product.image" alt="Reference product's photo">
+          <mat-card-content>
+            <p><b>Category:</b> {{ product.category }}</p>
+            <p *ngIf="product.available == true"><b>Available:</b> Yes</p>
+            <p *ngIf="product.available == false"><b>Available:</b> No</p>
+            <p><b>Description:</b> {{ product.description }}</p>
+            <p><b>Sales:</b> {{ product.numberOfSales }}</p>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </div>
+  </div>
+</div>
+
+<mat-card class="title-card">
+  <mat-card-title>Favorite Providers:</mat-card-title>
+</mat-card>
+<div class="container2">
+  <div *ngFor="let supplier of dataSupplier.filteredData">
+    <div class="mt-5">
+      <a style="text-decoration: none" [routerLink]="['/store-providers-profile', id, supplier.id]">
+        <mat-card class="product-card">
+          <mat-card-header>
+            <mat-card-title>{{ supplier.supplierName }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image class="img-products" [src]="supplier.image" alt="Reference product's photo">
+          <mat-card-content>
+            <p><b>Category:</b> {{ supplier.category }}</p>
+            <p><b>Description:</b> {{ supplier.description }}</p>
+            <p><b>Likes:</b> {{ supplier.likes }}</p>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,17 @@
+<mat-toolbar *ngIf="profile === 'supplier'" class="navbarc">
+  <h1>UrProvider |</h1>
+  <h3 (click)="changeUser()">| Suppliers</h3>
+  <div class="mat-spacer"></div>
+  <a mat-button *ngFor="let option of options"
+     [routerLink]="option.path">{{ option.title }}</a>
+</mat-toolbar>
+
+<mat-toolbar *ngIf="profile === 'store'" class="navbarc">
+  <h1>UrProvider |</h1>
+  <h3 (click)="changeUser()">| Stores</h3>
+  <div class="mat-spacer"></div>
+  <a mat-button *ngFor="let option of options2"
+     [routerLink]="option.path">{{ option.title }}</a>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,35 @@
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 80%;
+}
+.mat-form-field {
+  width: 100%;
+
+  background-color: #5598c3;
+  color: black;
+  border-radius: 10px;
+}
+.product-card {
+  max-width: 300px;
+  min-width: 300px;
+  background-color: #DCE4FC;
+  color: black;
+}
+.mt-5 {
+  margin-top: 3rem !important;
+}
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+mat-card-actions{
+  display: flex;
+  justify-content: right;
+  width: 120px;
+}
+

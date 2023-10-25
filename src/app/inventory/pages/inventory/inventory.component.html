@@ -1,0 +1,36 @@
+<h1 class="header">My Products</h1>
+
+<div align="center">
+  <button mat-raised-button class="but" [routerLink]="['/supplier/add-product', id]">ADD NEW PRODUCT</button>
+</div>
+
+<div class="container2">
+  <div *ngFor="let product of products">
+    <div class="mt-5">
+      <mat-card class="product-card">
+        <mat-card-header>
+          <mat-card-title>{{ product.name }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image class="img-products" [src]="product.image" alt="Reference product's photo">
+        <mat-card-content>
+          <p><b>Category:</b> {{ product.category }}</p>
+          <p *ngIf="product.available == true"><b>Available:</b> Yes</p>
+          <p *ngIf="product.available == false"><b>Available:</b> No</p>
+          <p><b>Description:</b> {{ product.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button class="but" [routerLink]= "['/supplier/edit-product', id, product.id]">EDIT</button>
+          <button mat-raised-button class="but" href="javascript:void(0)" (click)="deleteProduct(product.id)">DELETE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<br>
+<div align="center">
+  <div class="example-button-container">
+    <button mat-mini-fab class="back-button" aria-label="Back icon button" [routerLink]="['/supplier-home', id]">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>

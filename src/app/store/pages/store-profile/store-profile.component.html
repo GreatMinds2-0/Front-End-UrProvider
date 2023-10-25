@@ -1,0 +1,42 @@
+<h1 class="header">My information</h1>
+
+<div class="mm">
+  <mat-card class="product-card">
+    <h1 class="title-row">Store</h1>
+    <div mat-dialog-actions align="center">
+      <img mat-card-image style="max-width: 70px;" [src]="storeData.image">
+    </div>
+    <div class="row clean-row">
+      <b>Store Name: </b> {{storeData.storeName}}
+    </div>
+    <div class="row clean-row">
+      <b>Name: </b> {{storeData.name}}
+    </div>
+    <div class="row clean-row">
+      <b>Last Name: </b> {{storeData.lastName}}
+    </div>
+    <div class="row clean-row">
+      <b>Email: </b> {{storeData.email}}
+    </div>
+    <div class="row clean-row">
+      <b>Address: </b> {{storeData.address}}
+    </div>
+    <div class="row clean-row">
+      <b>Password: </b> {{storeData.password}}
+    </div>
+    <div class="row clean-row">
+      <b>Phone: </b> {{storeData.phone}}
+    </div>
+    <div mat-dialog-actions align="center">
+      <button mat-raised-button class="but" [routerLink]= "['/store-edit-profile',storeData.id]">Edit Profile</button>
+    </div>
+  </mat-card>
+</div>
+
+<div align="center">
+  <div class="example-button-container">
+    <button mat-mini-fab class="back-button" aria-label="Back icon button" [routerLink]="['/store-home', id]">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>

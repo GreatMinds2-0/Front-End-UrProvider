@@ -1,0 +1,71 @@
+.image-provider {
+  max-width: 300px;
+
+}
+.star{
+  margin: 0px 0px  ;
+  color: #a9a5a5;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .3s;
+  transform: scale(1);
+}
+
+.mat-icon{
+  width:60px;
+  height: 60px;
+}
+.star-gold{
+  color: orange;
+}
+.star-rating-animation:hover .star-hover{
+  color: orange;
+}
+
+.star-rating-animation .star-hover:hover ~ .star-hover{
+  color: #ddd;
+}
+.star-rating-animation .star-hover:hover{
+  transform: scale(1.3);
+}
+.comments{
+
+  position: relative;
+
+}
+.product-card{
+
+  max-width: 300px ;
+  min-width: 300px;
+}
+.img-supplier{
+
+  height: 300px;
+  object-fit: cover;
+
+}
+mat-paginator{
+
+  position: absolute;
+  width: 100%;
+  background: #DCE4FC;
+}
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.mt-5 {
+  margin-top: 3rem !important;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}

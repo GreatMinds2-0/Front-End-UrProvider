@@ -1,0 +1,69 @@
+.mm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  width: 400px;
+  background-color: #DCE4FC;
+  color: black;
+}
+
+.title-row {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.clean-row {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.image{
+  width: 100px;
+  height: 100px;
+  padding-bottom: 10px;
+}
+
+.icon-display {
+  transform: scale(5);
+  display: flex;
+  justify-content: center;
+}
+
+.supplier-form .content{
+  padding: 15px;
+  text-align: center;
+}
+
+.supplier-form .parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.but {
+  margin-top: 50px;
+  color: white;
+  background-color: #3F51B5;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.back-button {
+  background-color: #DCE4FC;
+  text-align: center;
+}
+

@@ -1,0 +1,80 @@
+.img-store {
+  display: flex;
+  object-fit: cover;
+  max-width: 200px;
+  min-width: 100px;
+
+  border-radius: 15px;
+}
+.title-card{
+  max-width: 300px ;
+  min-width: 300px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #457B9D;
+}
+.search {
+  width: 100%;
+  background-color: #5598c3;
+  color: black;
+  border-radius: 10px;
+}
+.content {
+ height: 140px;
+  width: 100%;
+
+}
+
+.menu, .logo {
+  width: 50%;
+}
+.menu {
+  float: right;
+  font-size: x-large;
+}
+.logo {
+  float: right;
+}
+.homecard {
+  overflow:auto;
+  padding-top: calc(10rem - 4.5rem);
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(10, 86, 140, 0.5) 0%,
+  rgba(10, 86, 140, 0.5) 100%), url("https://business-intelligence.grupobit.net/hubfs/Imagen_BlogBIT_1600x478px_300719.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.img-products {
+  height: 200px ;
+  object-fit: cover ;
+}
+
+.product-card {
+  max-width: 300px;
+
+  background-color: #DCE4FC;
+  color: black;
+}
+
+
+.img-home {
+  object-fit: cover;
+}

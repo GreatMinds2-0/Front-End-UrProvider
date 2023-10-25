@@ -1,0 +1,22 @@
+<div align="center">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{ store.storeName }}</mat-card-title>
+      <mat-card-subtitle>Person in charge: {{ store.name + " " + store.lastName }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="store.image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>Address: {{ store.address }}</p>
+      <p>Email: {{ store.email }}</p>
+      <p>Phone: {{ store.phone }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div align="center">
+  <div class="example-button-container">
+    <button mat-mini-fab class="back-button" aria-label="Back icon button" [routerLink]="['/supplier-home', id]">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>

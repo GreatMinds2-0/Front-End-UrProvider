@@ -1,0 +1,88 @@
+<div class="example-button-container">
+  <button mat-mini-fab class="back-button" aria-label="Back icon button" [routerLink]="['/store-home', id]">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+</div>
+<div class="container1">
+  <div class="ng-start-inserted">
+    <div class="mt-5">
+
+    </div>
+  </div>
+<div class="ng-start-inserted">
+  <div class="mt-5">
+    <mat-card class="product-card">
+      <mat-card-title>Provider: {{ supplierData.supplierName }}</mat-card-title>
+      <img mat-card-image class="img-supplier" src="{{supplierData.image}}">
+      <p>Person in charge: {{supplierData.name+''+supplierData.lastName}}</p>
+      <p>Category: {{supplierData.category}}</p>
+      <p>Address: {{supplierData.address}}</p>
+      <p>Email: {{supplierData.email}}</p>
+      <p>Phone: {{supplierData.phone}}</p>
+      <p>RUC: {{supplierData.ruc}}</p>
+    </mat-card>
+
+  </div>
+</div>
+  <div class="ng-start-inserted" >
+    <div class="mt-5">
+      <mat-card class="product-card">
+        <mat-card-content>
+          <mat-card-title>Description:</mat-card-title>
+          <mat-card-content><p>{{supplierData.description}}</p></mat-card-content>
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+  </div>
+  <div class="ng-start-inserted" >
+    <div class="mt-5">
+      <div class="star-rating-container star-rating-animation" fxLayout="row" fxLayoutAlign="start center" >
+        <h1>Rating:</h1>
+        <div *ngFor="let star of stars" [ngClass]="[star.class]" (click)="selectStar(star.id)">
+          <mat-icon>{{star.icon}}</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ng-start-inserted" >
+    <div class="mt-5">
+      <button  mat-raised-button color="primary" class="center" (click)="isVisibleProducts()" ><h1>Products</h1></button>
+    </div>
+  </div>
+  <div class="ng-start-inserted" >
+    <div class="mt-5">
+      <button mat-fab color="primary" (click)="updateLikes()" >
+
+        <mat-icon>favorite</mat-icon>
+      </button>
+       {{supplierData.likes}}
+    </div>
+  </div>
+</div>
+<br>
+<div>
+  <mat-card>
+    <h1>Comments:</h1>
+    <div class="comments">
+      <h2> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</h2>
+      <mat-paginator [length]="100"
+                     [pageSize]="1"
+                     [pageSizeOptions]="[1, 5, 15, 25]"
+                     aria-label="Select page">
+      </mat-paginator>
+
+    </div>
+  </mat-card>
+
+</div>
+
+<div class="left3" *ngIf="isVisible===true">
+
+  <app-products-by-supplier>
+
+  </app-products-by-supplier>
+</div>

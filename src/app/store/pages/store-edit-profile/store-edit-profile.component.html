@@ -1,0 +1,63 @@
+<h1 class="header">Edit your information</h1>
+
+<div class="mm">
+  <mat-card class="product-card">
+    <h1 class="title-row">Store</h1>
+    <div mat-dialog-actions align="center">
+      <img mat-card-image style="max-width: 70px;"  [src]=storeData.image>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Store Name</mat-label>
+        <input matInput placeholder="supplierName" [(ngModel)]="storeData.storeName">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Name</mat-label>
+        <input matInput placeholder="name" [(ngModel)]="storeData.name">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">LastName</mat-label>
+        <input matInput placeholder="lastname" [(ngModel)]="storeData.lastName">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Email</mat-label>
+        <input matInput placeholder="email" [(ngModel)]="storeData.email">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Address</mat-label>
+        <input matInput placeholder="address" [(ngModel)]="storeData.address">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Password</mat-label>
+        <input matInput placeholder="password" [(ngModel)]="storeData.password">
+      </mat-form-field>
+    </div>
+    <div class="row clean-row">
+      <mat-form-field>
+        <mat-label style="color: black">Phone</mat-label>
+        <input matInput placeholder="phone" [(ngModel)]="storeData.phone">
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions align="center">
+      <button mat-raised-button class="but" (click)="updateProfile()" [routerLink]= "['/store-profile',id]">Save</button>
+    </div>
+  </mat-card>
+</div>
+<div align="center">
+  <div class="example-button-container">
+    <button mat-mini-fab class="back-button" aria-label="Back icon button" [routerLink]="['/store-profile', id]">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>

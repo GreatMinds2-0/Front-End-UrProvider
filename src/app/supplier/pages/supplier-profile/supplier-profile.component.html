@@ -1,0 +1,51 @@
+<h1 class="header">My information</h1>
+
+<div class="mm">
+  <mat-card class="product-card">
+    <h1 class="title-row">Supplier</h1>
+    <div align="center">
+      <img class="image" [src] ="supplierData.image">
+    </div>
+    <div class="row clean-row">
+      <b>Supplier Name: </b> {{supplierData.supplierName}}
+    </div>
+    <div class="row clean-row">
+      <b>Name: </b> {{supplierData.name}}
+    </div>
+    <div class="row clean-row">
+      <b>Last Name: </b> {{supplierData.lastName}}
+    </div>
+    <div class="row clean-row">
+      <b>Email: </b> {{supplierData.email}}
+    </div>
+    <div class="row clean-row">
+      <b>Address: </b> {{supplierData.address}}
+    </div>
+    <div class="row clean-row">
+      <b>Password: </b> {{supplierData.password}}
+    </div>
+    <div class="row clean-row">
+      <b>RUC: </b> {{supplierData.ruc}}
+    </div>
+    <div class="row clean-row">
+      <b>Category: </b> {{supplierData.category}}
+    </div>
+    <div class="row clean-row">
+      <b>Description: </b> {{supplierData.description}}
+    </div>
+    <div class="row clean-row">
+      <b>Phone: </b> {{supplierData.phone}}
+    </div>
+    <div mat-dialog-actions align="center">
+      <button mat-raised-button class="but" [routerLink]= "['/supplier-profile-edit',supplierData.id]">Edit Profile</button>
+    </div>
+  </mat-card>
+</div>
+
+<div align="center">
+  <div class="example-button-container">
+    <button mat-mini-fab class="back-button" aria-label="Back icon button" [routerLink]="['/supplier-home', id]">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>

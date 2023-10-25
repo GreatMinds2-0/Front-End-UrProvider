@@ -1,0 +1,33 @@
+<mat-card-header>
+  <mat-form-field  appearance="standard">
+    <mat-label>Search provider</mat-label>
+    <input matInput style="color: #3F51B5" (keyup)="applyFilter($event)" placeholder="Search your provider" #input>
+    <mat-icon matPrefix >search</mat-icon>
+  </mat-form-field>
+</mat-card-header>
+
+<div class="container2">
+  <div *ngFor="let supplier of dataSuppliers.filteredData">
+    <div class="mt-5">
+      <a style="text-decoration: none" [routerLink]="['/store-providers-profile', id, supplier.id]">
+      <mat-card class="product-card">
+        <mat-card-header>
+          <mat-card-title>{{ supplier.supplierName}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image class="img-products" [src]="supplier.image" alt="Reference product's photo">
+        <mat-card-content>
+          <p><b>Category:</b> {{ supplier.category }}</p>
+          <p><b>Address:</b> {{ supplier.address }}</p>
+          <p><b>Description:</b> {{ supplier.description }}</p>
+        </mat-card-content>
+      </mat-card>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div align="center">
+  <div class="example-button-container">
+
+  </div>
+</div>

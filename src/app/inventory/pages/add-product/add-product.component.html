@@ -1,0 +1,43 @@
+<h1 class="header">Add New Product</h1>
+
+<div class="container2">
+  <div>
+    <div class="mt-5">
+      <mat-card class="product-card">
+        <mat-card-content>
+          <div class="title-row">
+            <b>Complete the product information</b>
+          </div>
+          <div class="row clean-row">
+            <b>Name: </b><input style="border-radius: 10px" type="text" name="category" [(ngModel)]="newProduct.name" class="form-control mb-3">
+          </div>
+          <div class="row clean-row">
+            <b>Category: </b><input style="border-radius: 10px" type="text" name="category" [(ngModel)]="newProduct.category" class="form-control mb-3">
+          </div>
+          <div class="row clean-row">
+            <b>Description: </b><input style="border-radius: 10px" type="text" name="description" [(ngModel)]="newProduct.description" class="form-control mb-3">
+          </div>
+          <div class="row clean-row">
+            <b>Image: </b><input style="border-radius: 10px" type="url" name="image" [(ngModel)]="newProduct.image" class="form-control mb-3">
+          </div>
+          <div class="row clean-row">
+            <mat-slide-toggle class="example-margin" [(ngModel)]="newProduct.available">Available</mat-slide-toggle>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div align="center">
+            <button mat-raised-button class="but" href="javascript:location.reload()" (click)="addProduct()" [routerLink]="['/supplier-inventory', id]">ADD</button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div align="center">
+  <div class="example-button-container">
+    <button mat-mini-fab class="back-button" aria-label="Back icon button" [routerLink]="['/supplier-inventory', id]">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>

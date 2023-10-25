@@ -1,0 +1,89 @@
+.homecard {
+  overflow:auto;
+  padding-top: calc(10rem - 4.5rem);
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(10, 86, 140, 0.5) 0%,
+  rgba(10, 86, 140, 0.5) 100%), url(src/assets/img/cajas.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.product-card {
+  max-width: 400px;
+  background-color: #457B9D;
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 50%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+.trtop {
+  background-color: #ababab;
+}
+
+mat-grid-tile {
+  background: #DCE4FC;
+}
+
+.header {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.img-product {
+  max-width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.menu, .logo {
+  width: 50%;
+}
+.menu {
+  float: right;
+  font-size: x-large;
+}
+.logo {
+  float: right;
+}
+
+.img-supplier {
+  display: flex;
+  object-fit: cover;
+  max-width: 200px;
+  min-width: 100px;
+
+  border-radius: 15px;
+}

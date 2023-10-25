@@ -1,0 +1,46 @@
+.product-card {
+  max-width: 400px;
+  background-color: #DCE4FC;
+  color: black;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.but {
+  margin-top: 50px;
+  color: white;
+  background-color: #3F51B5;
+}
+
+.img-products {
+  height: 300px;
+  object-fit: cover;
+}
+
+.example-button-container {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.back-button {
+  background-color: #DCE4FC;
+  text-align: center;
+}
+

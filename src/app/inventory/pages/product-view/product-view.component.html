@@ -1,0 +1,48 @@
+<div class="container2">
+  <div >
+    <div class="mt-5">
+        <mat-card class="product-card">
+          <mat-card-header>
+            <mat-card-actions>
+            <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+              <mat-icon (click)="isVisibleSupplier()" label="provider">business</mat-icon>
+            </button>
+            </mat-card-actions>
+            <mat-card-title>{{ productData.name}}</mat-card-title>
+
+          </mat-card-header>
+          <img mat-card-image class="img-products" [src]="productData.image" alt="Reference product's photo">
+          <mat-card-content>
+            <p><b>Category:</b> {{ productData.category }}</p>
+            <p><b>Description:</b> {{ productData.description }}</p>
+          </mat-card-content>
+        </mat-card>
+    </div>
+
+  </div>
+  <div class="mt-5">
+  <mat-card *ngIf="isVisible === true" class="product-card">
+    <mat-card-header >
+      <mat-card-actions>
+      <button mat-fab color="primary" aria-label="Example icon button with a delete icon " [routerLink]="['/store-providers-profile', userId,supplierId]">
+      </button>
+      </mat-card-actions>
+      <mat-card-title> <h1>Supplier Name: </h1>{{ supplierData.supplierName}}</mat-card-title>
+
+    </mat-card-header>
+    <img mat-card-image class="img-products" [src]="supplierData.image" alt="Reference product's photo">
+    <mat-card-content>
+      <p><b>Category:</b> {{ supplierData.category }}</p>
+      <p><b>Description:</b> {{ supplierData.description }}</p>
+    </mat-card-content>
+  </mat-card>
+  </div>
+</div>
+<div align="center">
+  <div class="example-button-container">
+    <button mat-mini-fab class="back-button" aria-label="Back icon button" [routerLink]="['/store-home', userId]">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>
+
